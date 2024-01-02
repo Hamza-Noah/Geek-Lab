@@ -8,7 +8,7 @@ interface Props {
 }
 
 interface ListItemProps {
-  active: boolean;
+  $active: boolean;
 }
 
 const List = styled.ul`
@@ -18,7 +18,7 @@ const List = styled.ul`
 
 const ListItem = styled.li<ListItemProps>`
   padding: 5px 0;
-  background: ${(props) => (props.active ? "blue" : "none")};
+  background: ${(props) => (props.$active ? "blue" : "none")};
 `;
 
 export default function ListGroup({ items, heading, onSelectItem }: Props) {
@@ -32,14 +32,12 @@ export default function ListGroup({ items, heading, onSelectItem }: Props) {
       <List>
         {items.map((city, i) => (
           <ListItem
-            active={i === selectedItem}
+          $active={i === selectedItem}
             onClick={(_) => {
               setSelectedItem(i);
               onSelectItem(city);
             }}
-            className={
-              selectedItem === i ? "list-group-item active" : "list-group-item"
-            }
+           
             key={i}
           >
             {city}

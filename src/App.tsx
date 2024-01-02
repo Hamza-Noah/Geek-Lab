@@ -12,6 +12,34 @@ export default function App() {
   };
 
   const [alert, setAlert] = useState(false);
+  const [person, setPerson] = useState({
+    firstName: "Mohamad",
+    age: 26,
+  });
+  const [customer, setCustomer] = useState({
+    name: "john",
+    address: {
+      city: "San Fransico",
+      zipCode: 94111,
+    },
+  });
+
+  const handleCustomer = () => {
+    console.log(customer);
+    
+    setCustomer(prevCustomer => ({
+      ...prevCustomer,
+      address: {
+        ...prevCustomer.address,
+        zipCode: 94112,
+      },
+    }));
+
+    
+
+    
+    console.log(customer.address.zipCode);
+  };
 
   return (
     <>
@@ -20,7 +48,15 @@ export default function App() {
         heading="Cities"
         onSelectItem={handleSelection}
       />
-      {alert && <Alert onClose={() => {setAlert(false)}}>This is an alert</Alert>}
+      {alert && (
+        <Alert
+          onClose={() => {
+            setAlert(false);
+          }}
+        >
+          This is an alert
+        </Alert>
+      )}
       <Button
         color="primary"
         onClick={() => {
@@ -29,8 +65,24 @@ export default function App() {
       >
         Show alert
       </Button>
-      <Like onClick={()=> {console.log("clicked");
-      }}/>
+      <Like
+        onClick={() => {
+          console.log("clicked");
+        }}
+      />
+      <br />
+      <div>{person.firstName + person.age}</div>
+      <button
+        onClick={() => {
+          setPerson({
+            ...person,
+            firstName: "Hamza",
+          });
+        }}
+      >
+        update name
+      </button>
+      <button onClick={handleCustomer}>Update Customer</button>
     </>
   );
 }
