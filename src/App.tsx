@@ -24,6 +24,34 @@ export default function App() {
     });
   };
 
+  const [skills, setSkills] = useState([
+    "HTML",
+    "CSS",
+    "JS",
+    "React",
+    "Boostrap",
+    "JQuery",
+    "Angular",
+    "SCSS",
+    "Tailwind",
+  ]);
+
+  const updateSkills = () => {
+    setSkills([...skills, "Vue"]);
+  };
+
+  const removeSkill = () => {
+    setSkills(skills.filter((skill) => skill != "Vue"));
+  };
+
+  const editSkill = () => {
+    setSkills(
+      skills.map((skill) =>
+        skill == "HTML" ? "HTML5" : skill == "CSS" ? "CSS3" : skill
+      )
+    );
+  };
+
   return (
     <>
       <div>
@@ -81,26 +109,38 @@ export default function App() {
         <h2>Updating Nested Objects</h2>
         <ul>
           <li>
-            instead of updating an existing state object we should give a brand
-            new object
+            the spread operator in JS is shallow which means when we use it to
+            copy an element and there is a property in it, its going to return
+            us the address in memeory of that object
           </li>
           <li>
-            if we have multiple properties inside the object and we don't wanna
-            rewrite them all we use the spread operator
+            so we need to avoid deeply nested structure in state objects cause
+            the deeper the structure gets the more complicated our update logic
+            will be so prefer a flat structure instead of a deeply nested
+            structure
           </li>
         </ul>
 
         <p>{drink.price}</p>
-        <button
-          onClick={() => {
-            setDrink({
-              ...drink,
-              price: 6,
-            });
-          }}
-        >
-          Change Price
-        </button>
+        <button onClick={handleClick}>Change Price</button>
+      </div>
+      <div>
+        <h2>Updating Arrays</h2>
+        <ul>
+          <li>
+            the same concept applies to arrays we should not add or remove an
+            item of the array instead we should give a brand new array
+          </li>
+        </ul>
+        <p>
+          {skills.map((skill, i) => (
+            <span key={`skill number ${i}`}>{skill}, </span>
+          ))}
+        </p>
+
+        <button onClick={updateSkills}>Update Skills</button>
+        <button onClick={removeSkill}>Remove a Skill</button>
+        <button onClick={editSkill}>Edit a Skill</button>
       </div>
     </>
   );
