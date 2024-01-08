@@ -52,6 +52,19 @@ export default function App() {
     );
   };
 
+  const [bugs, setBugs] = useState([
+    { id: 1, title: "bug 1", fixed: false },
+    { id: 2, title: "bug 2", fixed: false },
+  ]);
+
+  const fixBug = () => {
+    setBugs(
+      bugs.map((bug) => {
+        return bug.id == 1 ? { ...bug, fixed: true } : bug;
+      })
+    );
+  };
+
   return (
     <>
       <div>
@@ -141,6 +154,12 @@ export default function App() {
         <button onClick={updateSkills}>Update Skills</button>
         <button onClick={removeSkill}>Remove a Skill</button>
         <button onClick={editSkill}>Edit a Skill</button>
+      </div>
+      <div>
+        <h2>Updating Array of Objects</h2>
+        <ul>
+          <li></li>
+        </ul>
       </div>
     </>
   );
