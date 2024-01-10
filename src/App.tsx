@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Navbar from "./Components/SharingState/navbar";
+import Cart from "./Components/SharingState/cart";
 
 export default function App() {
   const [drink, setDrink] = useState({
@@ -51,6 +53,10 @@ export default function App() {
       )
     );
   };
+
+  // Sharing state between components
+
+  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
 
   const [bugs, setBugs] = useState([
     { id: 1, title: "bug 1", fixed: false },
@@ -160,6 +166,13 @@ export default function App() {
         <ul>
           <li></li>
         </ul>
+      </div>
+      <hr />
+      <div>
+        <h2>Sharing state between </h2>
+        <Navbar cartItemsCount={cartItems.length}/>
+      {/* Apply OnRemove product later */}
+        <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
       </div>
     </>
   );
