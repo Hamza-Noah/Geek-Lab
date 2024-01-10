@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Components/SharingState/navbar";
-import Cart from "./Components/SharingState/cart";
+import Cart from "./Components/SharingState/Cart";
+import Form from "./Components/Form/Form";
 
 export default function App() {
   const [drink, setDrink] = useState({
@@ -170,10 +171,15 @@ export default function App() {
       <hr />
       <div>
         <h2>Sharing state between </h2>
-        <Navbar cartItemsCount={cartItems.length}/>
-      {/* Apply OnRemove product later */}
-        <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
+        <Navbar cartItemsCount={cartItems.length} />
+        {/* Apply OnRemove product later */}
+        <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
       </div>
+
+      {/* Building Forms section */}
+      <section>
+        <Form />
+      </section>
     </>
   );
 }
