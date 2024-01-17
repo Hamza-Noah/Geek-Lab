@@ -170,7 +170,7 @@ export default function App() {
       </div>
       <hr />
       <div>
-        <h2>Sharing state between </h2>
+        <h2>Sharing state between Components</h2>
         <Navbar cartItemsCount={cartItems.length} />
         {/* Apply OnRemove product later */}
         <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
