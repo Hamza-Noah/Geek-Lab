@@ -6,6 +6,8 @@ export default function Form() {
   const person = { name: "", age: 0 };
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    console.log(ageRef);
+    
 
     if (nameRef.current !== null) {
       person.name = nameRef.current.value;
@@ -14,6 +16,7 @@ export default function Form() {
     if (ageRef.current !== null) {
       person.age = parseInt(ageRef.current.value);
     }
+    console.log(person);
   };
 
   return (
