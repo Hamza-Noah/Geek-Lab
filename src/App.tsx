@@ -4,6 +4,7 @@ import Cart from "./Components/SharingState/Cart";
 import Form from "./Components/Form/Form";
 import ControlledComponent from "./Components/Controled/ControlledComponent";
 import { useForm } from "react-hook-form";
+import ReactHookForm from "./Components/ReactHookForm.component.tsx/ReactHookForm";
 
 export default function App() {
   const [drink, setDrink] = useState({
@@ -74,10 +75,7 @@ export default function App() {
     );
   };
 
-  const {register, handleSubmit} = useForm();
-
-
-  
+  const { register, handleSubmit } = useForm();
 
   return (
     <>
@@ -191,9 +189,12 @@ export default function App() {
         <ControlledComponent />
       </section>
       <section>
-        <form onSubmit={handleSubmit(data => data)}>
-            <input type="text" {...register("name")} />
+        <form onSubmit={handleSubmit((data) => data)}>
+          <input type="text" {...register("name")} />
         </form>
+      </section>
+      <section>
+        <ReactHookForm />
       </section>
     </>
   );
