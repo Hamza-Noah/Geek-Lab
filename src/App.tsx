@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./Components/SharingState/navbar";
 import Cart from "./Components/SharingState/Cart";
 import Form from "./Components/Form/Form";
 import ControlledComponent from "./Components/Controled/ControlledComponent";
 import { useForm } from "react-hook-form";
 import ReactHookForm from "./Components/ReactHookForm.component.tsx/ReactHookForm";
+import axios from "axios";
 
 export default function App() {
   const [drink, setDrink] = useState({
@@ -76,6 +77,14 @@ export default function App() {
   };
 
   const { register, handleSubmit } = useForm();
+
+// Fetching Data
+
+useEffect(() => {
+  axios.get("https://jsonplaceholder.typicode.com/todos/12");
+
+})
+
 
   return (
     <>
