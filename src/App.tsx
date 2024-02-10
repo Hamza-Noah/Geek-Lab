@@ -6,6 +6,7 @@ import ControlledComponent from "./Components/Controled/ControlledComponent";
 import { useForm } from "react-hook-form";
 import ReactHookForm from "./Components/ReactHookForm.component.tsx/ReactHookForm";
 import axios from "axios";
+import Testing from "./Components/Testing";
 
 export default function App() {
   const [drink, setDrink] = useState({
