@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="user d-flex">
               <img src={user} alt="user image" className={`${styles["user-image"]} me-lg-4`} />
               <div className="user-data">
-                <a href="#">Moni Roy</a>
+                <a className={`${styles.username}`} href="#">Moni Roy</a>
                 <p>Admin</p>
               </div>
             </div>
