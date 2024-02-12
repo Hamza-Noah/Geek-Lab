@@ -1,5 +1,6 @@
 .navbar {
   font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 20px;
 }
 
 .actions {
@@ -21,8 +22,6 @@
     border: 0.6px solid #d5d5d5;
     border-radius: 19px;
     padding: 7px 7px 7px 40px;
-
-    
   }
   &::before {
     font-family: "Font Awesome 5 Free";
@@ -37,6 +36,7 @@
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    font-weight: 900;
   }
 }
 
@@ -56,5 +56,16 @@
   color: #404040;
   & + p {
     color: #565656;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar > div {
+    flex-wrap: wrap;
+    row-gap: 15px;
+    .actions {
+      flex-direction: column;
+      row-gap: 15px;
+    }
   }
 }
