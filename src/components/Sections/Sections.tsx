@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from "./section.module.css";
+import styles from "./Section.module.css";
 
 export default function Sections() {
 

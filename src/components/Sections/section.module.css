@@ -2,6 +2,7 @@
   background-color: #181818;
   padding: 30px;
   border-radius: 19px;
+  margin-bottom: 20px;
   div {
     text-align: center;
     display: flex;
@@ -14,7 +15,7 @@
     }
   }
 
-  .section-title{
+  .section-title {
     color: #484848;
   }
 }
@@ -53,10 +54,10 @@
 }
 
 @media (min-width: 768px) {
-  .sections{
-    div:not(:last-child){
+  .sections {
+    div:not(:last-child) {
       position: relative;
-      &::after{
+      &::after {
         content: "";
         position: absolute;
         height: 30px;

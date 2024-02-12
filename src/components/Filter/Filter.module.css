@@ -1,0 +1,87 @@
+.filter {
+  background-color: #212121;
+  padding: 25px 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  h3 {
+    color: #ffffff;
+  }
+
+  > div {
+    width: 100%;
+  }
+
+  label {
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+
+
+
+  select {
+    width: 100%;
+    outline: none;
+    border: solid #d6d6d6 1px;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 10px;
+    color: #a3a3a3;
+    padding-right: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .select-option {
+    margin-bottom: 8px;
+    position: relative;
+    &::after {
+      content: "\f078";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: bolder;
+      color: #000;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  
+
+  input {
+    width: 100%;
+    background-color: #554db7;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 24px;
+    padding: 15px 0;
+    font-weight: 600;
+  }
+
+  p {
+    color: #6b6b6b;
+  }
+}
+
+
+.filter {
+    /* Your existing styles */
+  
+    .select-option.open {
+      /* Your existing styles */
+      position: relative;
+  
+      &::after { 
+        transform: rotate(180deg);
+
+      }
+  
+    
+    }
+  }
+  

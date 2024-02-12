@@ -1,0 +1,8 @@
+.content{
+  background-color: #181818;
+  border-radius: 15px;
+  padding: 49px 63px;
+  .filter{
+    width: fit-content;
+  }
+}
