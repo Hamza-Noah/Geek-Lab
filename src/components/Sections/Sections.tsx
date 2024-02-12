@@ -11,7 +11,7 @@ export default function Sections() {
         <div className={`${soon ? styles.soon : ""}`}><h2>Automation</h2></div>
         <div className={`${soon ? styles.soon : ""}`}><h2>Portfolio</h2></div>
         <div className={styles.active}><h2>Alerts</h2></div>
-        <div><h2>Training</h2></div>
+        <div className={`${styles["section-title"]}`}><h2>Training</h2></div>
     </section>
   )
 }
