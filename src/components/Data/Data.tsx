@@ -16,33 +16,31 @@ export default function Data() {
   return (
     <section className={styles.data}>
       <div className={styles.test}>
-        <div className={styles["data-layer"]}>
-          <div className={styles["data-info"]}>
-            <div className="d-flex justify-content-between">
-              <div className={styles["data-stat"]}>
-                <i>
-                  <img src={dataImage1} alt="" />
-                </i>
-                <h3>$TSLA</h3>
-              </div>
-              <div className={styles["data-stat"]}>
-                <i>
-                  <img src={dataImage2} alt="" />
-                </i>
-                <h3>200 Contracts</h3>
-              </div>
-              <div className={styles["data-stat"]}>
-                <i>
-                  <img src={dataImage3} alt="" />
-                </i>
-                <h3>17.2%</h3>
-              </div>
-              <div className={styles["data-stat"]}>
-                <i>
-                  <img src={dataImage4} alt="" />
-                </i>
-                <h3>High Risk</h3>
-              </div>
+        <div className={styles["data-info"]}>
+          <div className="d-flex justify-content-between">
+            <div className={styles["data-stat"]}>
+              <i>
+                <img src={dataImage1} alt="" />
+              </i>
+              <h3>$TSLA</h3>
+            </div>
+            <div className={styles["data-stat"]}>
+              <i>
+                <img src={dataImage2} alt="" />
+              </i>
+              <h3>200 Contracts</h3>
+            </div>
+            <div className={styles["data-stat"]}>
+              <i>
+                <img src={dataImage3} alt="" />
+              </i>
+              <h3>17.2%</h3>
+            </div>
+            <div className={styles["data-stat"]}>
+              <i>
+                <img src={dataImage4} alt="" />
+              </i>
+              <h3>High Risk</h3>
             </div>
           </div>
         </div>
