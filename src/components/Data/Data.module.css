@@ -1,0 +1,32 @@
+.data {
+  background-color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: "Nunito Sans";
+}
+
+.data-info {
+  padding: 30px;
+  background: linear-gradient(
+      287.84deg,
+      rgba(102, 126, 234, 0.231) 44.52%,
+      rgba(144, 75, 162, 0) 71.09%
+    ),
+    linear-gradient(0deg, #d5d5d5, #d5d5d5);
+  border: solid #d5d5d5 0.6px;
+  background-color: #212121;
+  .data-stat {
+    display: flex;
+    align-items: center;
+  }
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  i {
+    width: 40px;
+    height: 30px;
+  }
+}
